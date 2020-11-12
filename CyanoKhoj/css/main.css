@@ -1,0 +1,528 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url("../fonts/ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url("../fonts/ubuntu/Ubuntu-Bold.ttf");
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+* {
+  margin: 0rem;
+  padding: 0rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f1f2f6;
+}
+
+html {
+  font-size: 62.5%;
+  /*1rem=10px*/
+}
+
+body, html {
+  height: 100%;
+  font-family: Ubuntu-Regular, sans-serif;
+  background: radial-gradient(circle at 60% 100%, #0652DD 5%, #1B1464 94%);
+}
+
+/*---------------------------------------------*/
+a {
+  font-family: Ubuntu-Regular;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0rem;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #403866;
+}
+
+/*---------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0rem;
+}
+
+p {
+  font-family: Ubuntu-Regular;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0rem;
+}
+
+ul, li {
+  margin: 0rem;
+  list-style-type: none;
+}
+
+/*---------------------------------------------*/
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #8f8fa1;
+}
+
+input:-moz-placeholder {
+  color: #8f8fa1;
+}
+
+input::-moz-placeholder {
+  color: #8f8fa1;
+}
+
+input:-ms-input-placeholder {
+  color: #8f8fa1;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #8f8fa1;
+}
+
+textarea:-moz-placeholder {
+  color: #8f8fa1;
+}
+
+textarea::-moz-placeholder {
+  color: #8f8fa1;
+}
+
+textarea:-ms-input-placeholder {
+  color: #8f8fa1;
+}
+
+label {
+  display: block;
+  margin: 0;
+}
+
+/*---------------------------------------------*/
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+iframe {
+  border: none !important;
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ Utility ]*/
+.txt1 {
+  font-family: Ubuntu-Regular;
+  font-size: 1.6rem;
+  color: #827ffe;
+  line-height: 1.4;
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ login ]*/
+.limiter {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: radial-gradient(circle at 60% 100%, #0652DD 5%, #1B1464 94%);
+}
+
+/*LOGO*/
+.limiter .logo {
+  height: 10vh;
+  color: #f1f2f6;
+  font-size: 4rem;
+}
+
+.limiter .logo span {
+  color: #ffc451;
+}
+
+.container-login100 {
+  width: 100%;
+  height: 89vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrap-login100 {
+  width: 39.0rem;
+  background: transparent;
+  border-radius: 1.0rem;
+  position: relative;
+  /* border: ..1rem solid #ffc451; */
+  padding: .1rem;
+}
+
+/*==================================================================
+  [ Form ]*/
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-title {
+  font-family: Ubuntu-Bold;
+  font-size: 3.8rem;
+  color: #f1f2f6;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: .3rem solid #DD9106;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+}
+
+/* #cc3d00 radial-gradient(circle at 60% 100%, #1B1464 5%, #2f3542 94%) */
+/*------------------------------------------------------------------
+  [ Input ]*/
+.wrap-input100 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  /* background-color: #e6e6e6; */
+  border: .1rem solid transparent;
+  border-radius: .3rem;
+}
+
+/*fa-icons*/
+.wrap-input100 .fa {
+  font-size: 3.0rem;
+}
+
+.wrap-input100 #password-toggle {
+  font-size: 2.2rem;
+  position: absolute;
+  right: -1.0rem;
+  cursor: pointer;
+}
+
+/*Hide default show password button*/
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/*---------------------------------------------*/
+.input100 {
+  font-family: Ubuntu-Bold;
+  color: #f1f2f6;
+  line-height: 1.2;
+  font-size: 2.2rem;
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 6.0rem;
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+.input100 ::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.input100 :-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input100 ::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input100 ::placeholder {
+  opacity: 1;
+}
+
+/*------------------------------------------------------------------
+  [ Focus Input ]*/
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: calc(100% + .2rem);
+  top: -1.0rem;
+  left: 3.0rem;
+  pointer-events: none;
+  border-bottom: .3rem solid #f1f2f6;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scaleX(1.05) scaleY(1.3);
+  transform: scaleX(1.05) scaleY(1.3);
+}
+
+.input100:focus + .focus-input100 {
+  border-bottom: .3rem solid #DD9106;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.eff-focus-selection {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/*==================================================================
+  [ Restyle Checkbox ]*/
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-family: Ubuntu-Regular;
+  font-size: 1.6rem;
+  color: #999999;
+  line-height: 1.2;
+  display: block;
+  position: relative;
+  padding-left: 2.6rem;
+  cursor: pointer;
+}
+
+.label-checkbox100::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 1.3rem;
+  color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: .3rem;
+  background: #f1f2f6;
+  border: .2rem solid #827ffe;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #827ffe;
+}
+
+/*------------------------------------------------------------------
+  [ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.login100-form-btn, .register-btn {
+  font-family: Ubuntu-Bold;
+  color: #f1f2f6;
+  background-image: -webkit-gradient(linear, left top, right top, from(#DD9106), color-stop(#ff5e57), to(#DD9106));
+  background-image: linear-gradient(to right, #DD9106, #ff5e57, #DD9106);
+  background-size: 200% auto;
+  border-radius: 2.5rem;
+  font-size: 2.0rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 2.0rem;
+  width: 100%;
+  height: 6.2rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background-position: right center;
+  -webkit-box-shadow: 0 0 .3rem .1rem #000;
+  box-shadow: 0 0 .3rem .1rem #000;
+}
+
+.register-btn {
+  background: transparent;
+  border: .2rem solid #ff5e57;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.register-btn:hover {
+  /* transform: scale(1.1);  */
+  border: .2rem solid whitesmoke;
+}
+
+/*------------------------------------------------------------------
+  [ Alert validate ]*/
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: #fff;
+  border: .1rem solid #c80000;
+  border-radius: .3rem;
+  padding: .4rem 2.5rem .5rem 1.0rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1.2rem;
+  pointer-events: none;
+  font-family: Ubuntu-Regular;
+  color: #c80000;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f12a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 1.8rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1.8rem;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/*Toast Message*/
+.toast-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#toast {
+  position: absolute;
+  width: 35rem;
+  top: 50%;
+  left: 50%;
+  font-size: 2.2rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*Responsive Media Queries*/
+@media (max-width: 998px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 44%;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ Responsive ]*/
+/*# sourceMappingURL=main.css.map */
